@@ -9,6 +9,12 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/tailwind": "^5.1.4",
+    "@catppuccin/tailwindcss": "^0.1.6",
     "astro": "^5.1.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.15",
+    "tailwindcss": "^3.4.17"
   }
 }
