@@ -1,25 +1,32 @@
+---
+import { Image } from "astro:assets";
+import logo from "./public/portfolio.webp";
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/portfolio.webp" />
+		<link rel="icon" type="image/svg+xml" href="/Alejandro Galarza.webp" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Alejandro Galarza</title>
 	</head>
-	<body class="cat-mocha bg-cat-base">
-		<nav class="flex justify-between items-center">
+	<body class="cat-mocha bg-cat-base font-sans">
+		<nav class="absolute flex justify-between items-center">
 			<div class="flex items-center space-x-4 px-4 py-4 ">
-				<a href="/"><img  src="./portfolio.webp" alt="logo" class="h-12 w-12 rounded-full"></a>
+				<a href="/"><Image loading="eager" src={logo} alt="logo" class="h-12 w-12 rounded-full"></a>
 			</div>
 			<ul class="flex flex-row space-x-4 text-cat-text font-bold px-4 py-4 ">
 				<li><a href="/projects">Projects</a></li>
 				<li><a href="/contact">Contact</a></li>
 			</ul>
 	</nav>
+	<main class="flex flex-col items-center justify-center">
 		<slot />
+	</main>
 		<footer class="flex justify-center items-center bg-cat-mantle text-cat-text font-bold px-4 py-4 ">
-			<p>🌸🌸🌸🌸</p>
+			<p>🔴🟠🟡🟢🔵🟣⚪</p>
 	</body>
 </html>
 
