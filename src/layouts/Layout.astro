@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import logo from "../assets/portfolio.webp";
+
+
 ---
 
 <!doctype html>
@@ -22,14 +24,21 @@ import logo from "../assets/portfolio.webp";
 				<li><a href="/contact">Contact</a></li>
 			</ul>
 	</nav>
-	<main class="flex flex-col items-center justify-center">
+	<main class="w-full flex flex-col items-center justify-center">
 		<slot />
 	</main>
 		<footer class="flex justify-center items-center bg-cat-mantle text-cat-text font-bold px-4 py-4 ">
-			<p>🔴🟠🟡🟢🔵🟣⚪</p>
+			<p>💜💜💜</p>
 	</body>
 </html>
-
+<script>
+	var deviceWidth = window.innerWidth;
+	var title = document.querySelector("title");
+	console.log(deviceWidth);
+	if (title) {
+		// title.innerHTML += ` ${deviceWidth}`;
+	}
+</script>
 <style>
 	html,
 	body {
