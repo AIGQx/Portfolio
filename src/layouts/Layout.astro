@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import logo from "../assets/portfolio.webp";
+import { loadLang } from "../scripts/langScript";
+//language detector script
 ---
 
 <!doctype html>
@@ -14,7 +16,9 @@ import logo from "../assets/portfolio.webp";
 	</head>
 	<body class="cat-mocha bg-cat-base font-sans">
 		<nav class="absolute w-full flex items-center">
-			<div class="flex w-full justify-between items-center space-x-4 px-4 py-4">
+			<div
+				class="flex w-full justify-between items-center space-x-4 px-4 py-4"
+			>
 				<a href="/"
 					><Image
 						loading="eager"
@@ -26,10 +30,14 @@ import logo from "../assets/portfolio.webp";
 				<ul
 					class="flex flex-row space-x-4 text-cat-text font-bold p-2 rounded-lg"
 				>
-					<li class="hover:text-cat-mauve transition duration-200 ease-in-out">
-						<a href="/" class=" flex flex-row gap-2 items-center font-thin lang"
+					<li
+						class="hover:text-cat-mauve transition duration-200 ease-in-out"
+					>
+						<a
+							href="/"
+							class="flex flex-row gap-2 items-center font-thin lang"
 							><p class="hidden">Español</p><svg
-								class="h-8 w-8" 
+								class="h-8 w-8"
 								viewBox="0 0 24 24"
 								fill="none"
 								stroke="currentColor"
@@ -44,35 +52,36 @@ import logo from "../assets/portfolio.webp";
 								></path>
 								<path d="M12 20l4 -9l4 9"></path>
 								<path d="M19.1 18h-6.2"></path>
-							</svg></a>
+							</svg></a
+						>
 					</li>
 				</ul>
 			</div>
 		</nav>
-			<main class="w-full flex flex-col items-center justify-center">
-				<slot />
-			</main>
-			<footer
-				class="flex justify-center items-center bg-cat-mantle text-cat-text font-bold px-4 py-4"
-			>
-				<p>💜💜💜</p>
-			</footer>
+		<main class="w-full flex flex-col items-center justify-center">
+			<slot />
+		</main>
+		<footer
+			class="flex justify-center items-center bg-cat-mantle text-cat-text font-bold px-4 py-4"
+		>
+			<p>:)</p>
+		</footer>
 
 		<script>
-			var lang = document.querySelector('.lang');
-			if(lang){
-				lang.addEventListener('mouseover', () => {
-				if (lang?.firstChild && lang.textContent === 'Español') {
-					console.log(lang.firstChild);
-					lang.firstChild = 'English';
-					//show lang tag
-					lang.classList.remove('hidden');
-				} else if (lang?.firstChild) {
-					lang.firstChild = 'Español';
-				}
-			});
-			}
+			var lang = document.querySelector(".lang");
 
+			if (lang) {
+				lang.addEventListener("mouseover", () => {
+					if (lang?.firstChild) {
+						lang.children[0].classList.remove("hidden");
+					}
+				});
+				lang.addEventListener("mouseout", () => {
+					if (lang?.firstChild) {
+						lang.children[0].classList.add("hidden");
+					}
+				});
+			}
 		</script>
 		<style>
 			html,
