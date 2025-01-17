@@ -140,7 +140,7 @@ import Layout from "../layouts/Layout.astro";
 				</svg>
 			</a>
 			<a
-				href=""
+				href="credits"
 				class="p-2 bg-gradient-to-r from-cat-lavender to-cat-blue rounded-lg flex gap-2 items-center justify-center w-2/4"
 			>
 				<p>Creditos</p>
@@ -226,7 +226,7 @@ import Layout from "../layouts/Layout.astro";
 	</section>
 	<section>
 		<h1 class="font-extrabold text-4xl text-center m-20 text-cat-text">EXPERIENCIA</h1>
-		<div class="flex flex-col items-center justify-center gap-8">
+		<div class="flex flex-col items-center justify-center gap-8 bg-cat-mantle p-4 rounded-lg text-cat-text">
 			<div class="flex flex-col items-center justify-center gap-4">
 				<h2 class="font-bold text-2xl">Empresa</h2>
 				<p class="text-cat-subtext0">Cargo</p>
@@ -247,23 +247,29 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</div>
 	</section>
-	<section class="text-center w-full m-20 text-cat-text">
+	<section class="my-20 text-cat-text w-full p-6">
 		<h1 class="font-extrabold text-4xl text-center mb-12">CONTACTO</h1>
-		<div class="flex justify-center items-center flex-col gap-8">
+		<form class="flex  flex-col gap-2 bg-cat-mantle p-8 rounded-lg text-cat-text max-w-[550px] mx-auto text-base">	
+			<label class="" for="nombre">Nombre</label>
 			<input
 				type="text"
-				placeholder="Nombre"
-				class="bg-cat-mantle p-4 w-1/4 rounded-lg text-cat-text font-bold"
+				placeholder="Tu nombre"
+				class="bg-cat-surface0 p-3 w-full rounded-lg text-cat-text"
 			/>
+			<label for="email">Email</label>
 			<input
 				type="email"
-				placeholder="Email"
-				class="bg-cat-mantle p-4 w-1/4 rounded-lg text-cat-text font-bold"
+				placeholder="ejemplo@mail.com"
+				class="bg-cat-surface0 p-3 w-full rounded-lg text-cat-text"
 			/>
-			<textarea name="mensaje" id="mensje" placeholder="Mensaje" class="bg-cat-mantle p-4 w-1/4 rounded-lg text-cat-text font-bold field-sizing-content"></textarea>
-			<button class="bg-cat-mantle p-4 rounded-lg text-cat-text font-bold"
-				>Send</button
+			<label for="mensaje">Mensaje</label>
+			<textarea name="mensaje" rows="4" id="mensje" placeholder="Escriba su mensaje..." class="bg-cat-surface0 p-3 w-full rounded-lg text-cat-text field-sizing-content"></textarea>
+			<div class="flex flex-row justify-center mt-4 text-cat-crust">
+				<button class="bg-gradient-to-r  from-cat-red to-cat-peach align-self-center px-3 py-2 rounded-lg font-semibold"
+				>Enviar</button
 			>
-		</div>
+			</div>
+
+		</form>
 	</section>
 </Layout>
