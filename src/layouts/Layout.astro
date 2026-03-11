@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import logo from "../assets/portfolio.webp";
 import { loadLang } from "../scripts/langScript";
+import '../styles/global.css';
 //language detector script
 ---
 
@@ -14,7 +15,7 @@ import { loadLang } from "../scripts/langScript";
 		<meta name="generator" content={Astro.generator} />
 		<title>Alejandro Galarza</title>
 	</head>
-	<body class="cat-mocha bg-cat-base font-sans">
+	<body class="bg-cat-base font-sans">
 		<nav class="absolute w-full flex items-center">
 			<div
 				class="flex w-full justify-between items-center space-x-4 px-4 py-4"
