@@ -7,9 +7,21 @@ import Contact from "../components/sections/Contact.astro";
 ---
 
 <Layout>
-	<Main />
-	<Projects />
-	<Experience />
-	<Contact />
+	<div class="views" id="carousel-views">
+		<div class="carousel-track" id="carousel-track">
+			<div class="carousel-slide" data-section="main">
+				<Main />
+			</div>
+			<div class="carousel-slide" data-section="projects">
+				<Projects />
+			</div>
+			<div class="carousel-slide" data-section="experience">
+				<Experience />
+			</div>
+			<div class="carousel-slide" data-section="contact">
+				<Contact />
+			</div>
+		</div>
+	</div>
 </Layout>
 

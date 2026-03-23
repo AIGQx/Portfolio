@@ -1,2 +1,7 @@
 @config "../../tailwind.config.mjs";
 @import "tailwindcss";
+@plugin "daisyui" {
+    themes: false;
+}
+@plugin "../../catppuccinTheme.mocha.ts";
+@import "@catppuccin/tailwindcss/mocha.css";
